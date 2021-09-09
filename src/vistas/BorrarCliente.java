@@ -30,7 +30,7 @@ public class BorrarCliente extends javax.swing.JInternalFrame {
         panelBuscar = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         tbTelefonoBor = new javax.swing.JTextField();
-        btnBuscarDniBor = new javax.swing.JButton();
+        btnBorrarDniBor = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         taDatosBor = new javax.swing.JTextArea();
@@ -55,7 +55,7 @@ public class BorrarCliente extends javax.swing.JInternalFrame {
             }
         });
 
-        btnBuscarDniBor.setText("Buscar");
+        btnBorrarDniBor.setText("Borrar");
 
         jLabel2.setFont(new java.awt.Font("Myanmar Text", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 204, 255));
@@ -73,7 +73,7 @@ public class BorrarCliente extends javax.swing.JInternalFrame {
         panelBuscarLayout.setHorizontalGroup(
             panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBuscarLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addGroup(panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelBuscarLayout.createSequentialGroup()
@@ -81,9 +81,9 @@ public class BorrarCliente extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tbTelefonoBor, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSalirBor, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBuscarDniBor))))
+                        .addGroup(panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnSalirBor, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                            .addComponent(btnBorrarDniBor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(31, 31, 31))
             .addGroup(panelBuscarLayout.createSequentialGroup()
                 .addGap(113, 113, 113)
@@ -96,7 +96,7 @@ public class BorrarCliente extends javax.swing.JInternalFrame {
                 .addGroup(panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelBuscarLayout.createSequentialGroup()
                         .addGap(58, 58, 58)
-                        .addComponent(btnBuscarDniBor)
+                        .addComponent(btnBorrarDniBor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSalirBor))
                     .addGroup(panelBuscarLayout.createSequentialGroup()
@@ -107,8 +107,8 @@ public class BorrarCliente extends javax.swing.JInternalFrame {
                             .addComponent(tbTelefonoBor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -131,7 +131,7 @@ public class BorrarCliente extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscarDniBor;
+    private javax.swing.JButton btnBorrarDniBor;
     private javax.swing.JButton btnSalirBor;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;

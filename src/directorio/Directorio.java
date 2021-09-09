@@ -52,15 +52,17 @@ public class Directorio {
         //borrarCliente() que en base a un dni elimina el cliente del directorio.*/
         Set<String> claves = directorio.keySet();
         Cliente cliente = null;
+        String codigo = null;
         for (String clave : claves) {
             if(directorio.get(clave).getDni()==dni){
                 cliente=directorio.get(clave);
-                directorio.remove(clave);
-                System.out.println("CLIENTE BORRADO");
-            }else
-                System.out.println("NO EXISTE EL CLIENTE");
-                          
-        }                     
+                codigo=clave;
+                System.out.println("\nEl cliente: "+cliente.toString());
+                System.out.println("Con el numero: "+codigo);
+                System.out.println("Fue borrado");
+            }                
+        }
+        directorio.remove(codigo);
         return cliente;
     }
     

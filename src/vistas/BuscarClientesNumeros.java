@@ -28,7 +28,7 @@ public class BuscarClientesNumeros extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         panelBuscar = new javax.swing.JPanel();
-        btnSalirCN = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
         btnBuscarTel = new javax.swing.JButton();
         tbTelefono = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -38,11 +38,17 @@ public class BuscarClientesNumeros extends javax.swing.JInternalFrame {
         btnBuscarAp = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         lbMuestr = new javax.swing.JList<>();
+        btnSalirCN1 = new javax.swing.JButton();
+
+        setClosable(true);
+        setIconifiable(true);
+        setTitle("Buscar Clientes o Numeros");
 
         panelBuscar.setBackground(new java.awt.Color(0, 17, 78));
         panelBuscar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btnSalirCN.setText("Salir");
+        btnActualizar.setText("Actualizar");
+        btnActualizar.setMargin(new java.awt.Insets(2, 2, 2, 2));
 
         btnBuscarTel.setText("Buscar");
 
@@ -75,6 +81,9 @@ public class BuscarClientesNumeros extends javax.swing.JInternalFrame {
         lbMuestr.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(lbMuestr);
 
+        btnSalirCN1.setText("Salir");
+        btnSalirCN1.setMargin(new java.awt.Insets(2, 2, 2, 2));
+
         javax.swing.GroupLayout panelBuscarLayout = new javax.swing.GroupLayout(panelBuscar);
         panelBuscar.setLayout(panelBuscarLayout);
         panelBuscarLayout.setHorizontalGroup(
@@ -99,11 +108,13 @@ public class BuscarClientesNumeros extends javax.swing.JInternalFrame {
                             .addComponent(btnBuscarTel)
                             .addComponent(btnBuscarAp)))
                     .addGroup(panelBuscarLayout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(btnSalirCN, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelBuscarLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBuscarLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(btnSalirCN1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         panelBuscarLayout.setVerticalGroup(
@@ -124,8 +135,12 @@ public class BuscarClientesNumeros extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnSalirCN)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panelBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBuscarLayout.createSequentialGroup()
+                        .addComponent(btnActualizar)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnSalirCN1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -152,9 +167,10 @@ public class BuscarClientesNumeros extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnBuscarAp;
     private javax.swing.JButton btnBuscarTel;
-    private javax.swing.JButton btnSalirCN;
+    private javax.swing.JButton btnSalirCN1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
