@@ -3,12 +3,16 @@ package vistas;
 
 import directorio.*;
 
+
 public class Menu extends javax.swing.JFrame {
 
+    Directorio d1 = new Directorio();
     public Menu() {
         initComponents();
     }
-
+    public void llamar(Directorio dd){
+        d1=dd;
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -37,7 +41,7 @@ public class Menu extends javax.swing.JFrame {
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
@@ -105,7 +109,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(buscar2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(borrar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         setJMenuBar(jMenuBar1);
@@ -121,35 +125,45 @@ public class Menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
-        BorrarCliente borrar = new BorrarCliente();
-        panel.add(borrar);
-        borrar.show();
+        panel.removeAll();
+        panel.repaint();
+        BorrarCliente borrarC = new BorrarCliente();
+        panel.add(borrarC);
+        borrarC.setVisible(true);
+        borrarC.moveToFront();
     }//GEN-LAST:event_borrarActionPerformed
 
     private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
-        AgregarCliente agregar = new AgregarCliente();
-        panel.add(agregar);
-        agregar.show();
+        AgregarCliente agregarC = new AgregarCliente(d1);
+        panel.removeAll();
+        panel.repaint();
+        panel.add(agregarC);
+        agregarC.setVisible(true);
+        agregarC.moveToFront();
     }//GEN-LAST:event_agregarActionPerformed
 
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
-        BuscarCliente buscar = new BuscarCliente();
-        panel.add(buscar);
-        buscar.show();
+        panel.removeAll();
+        panel.repaint();
+        BuscarCliente buscarC = new BuscarCliente(d1);
+        panel.add(buscarC);
+        buscarC.setVisible(true);
+        buscarC.moveToFront();
     }//GEN-LAST:event_buscarActionPerformed
 
     private void buscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar2ActionPerformed
-        BuscarClientesNumeros buscarCN = new BuscarClientesNumeros();
+        /*BuscarClientesNumeros buscarCN = new BuscarClientesNumeros();
         panel.add(buscarCN);
-        buscarCN.show();
+        buscarCN.setVisible(true);*/
+        
     }//GEN-LAST:event_buscar2ActionPerformed
 
     public static void main(String args[]) {

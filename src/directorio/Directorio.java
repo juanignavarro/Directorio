@@ -13,8 +13,12 @@ public class Directorio {
     HashMap<String,Cliente> directorio=new HashMap();
     
     public void agregarCliente(String numero, Cliente cliente){
-        directorio.put(numero, cliente);
-        System.out.println("Cliente añadidio.");
+        if(directorio.containsKey(numero)){
+            System.out.println("INGRESE OTRO NUMERO");
+        }else{
+            directorio.put(numero, cliente);
+            System.out.println("Cliente añadidio.");
+        }
     }
     
     public Cliente buscarCliente(String numero){

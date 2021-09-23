@@ -2,18 +2,33 @@
 package vistas;
 
 import directorio.*;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class AgregarCliente extends javax.swing.JInternalFrame {
-
-    public AgregarCliente() {
+    
+    Directorio d1;    
+   
+    public AgregarCliente(Directorio d1) {
         initComponents();
+        this.d1 = d1;
     }
-
+    public void limpiar(){
+        
+        tbTelefono.setText("");
+        tbDireccion.setText("");
+        tbCiudad.setText("");
+        tbApellido.setText("");
+        tbNombre.setText("");
+        tbDni.setText("");
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        jDialog1 = new javax.swing.JDialog();
+        jDialog2 = new javax.swing.JDialog();
         panelAgregar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -34,6 +49,28 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
         btnNuevo = new javax.swing.JButton();
         btnSalirA = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
@@ -261,6 +298,16 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_tbDniActionPerformed
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+        if("".equals(tbDni.getText())){
+            JOptionPane.showMessageDialog(null, "Campos vacios.","ERROR", JOptionPane.ERROR_MESSAGE);
+        }else{
+            Cliente cliente = new Cliente(Integer.parseInt(tbDni.getText()),tbNombre.getText(),tbApellido.getText(),tbCiudad.getText(),tbDireccion.getText());
+            d1.agregarCliente(tbTelefono.getText(), cliente);
+            limpiar();
+            JOptionPane.showMessageDialog(null, "Cliente añadido","CLIENTE",JOptionPane.OK_OPTION);
+            Menu m = new Menu();
+            m.llamar(d1);
+        }    
         
     }//GEN-LAST:event_btnNuevoActionPerformed
 
@@ -272,6 +319,8 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
+    private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -288,4 +337,5 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField tbNombre;
     private javax.swing.JTextField tbTelefono;
     // End of variables declaration//GEN-END:variables
+
 }
